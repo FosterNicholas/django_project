@@ -1,0 +1,22 @@
+{% extends "FeedApp/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h2>
+    <p>New Post:</p>
+</h2>
+
+<!-- You must remember to incluide the enctype properly in the form tage for the uploaded
+     file to be attached to the request properly-->
+
+<form action="{% url 'FeedApp:new_post' %}" method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <br><br>
+    <button name="submit" class="btn btn-outline-primary">Post</button>
+
+</form>
+
+{% endblock content %}
