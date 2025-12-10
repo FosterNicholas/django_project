@@ -1,11 +1,53 @@
 {% extends "FeedApp/base.html" %}
 
 {% block page_header %}
-<div class="jumbotron">
-    <h1 class="display-3">PyFeed</h1>
-    <p class="lead">A Social Network for Python People.
-    </p>
 
-    <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}" role="button">Join Now &raquo;</a>
+<div class="jumbotron jumbotron-image">
+    <h1 class="display-3">FriendlyFeed</h1>
+    <p class="lead">A Social Network to Build Community and Share Meals</p>
+    <hr class="my-4">
+    <p>A social network made by a friend to connect with friends about their favorite foods!</p>
+    <a class="btn btn-success" href="{% url 'users:register' %}" role="button">Join Now &raquo;</a>
 </div>
+
+
 {% endblock page_header %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container mt-5">
+    <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="{% static 'homephotos/steak.jpeg' %}" class="card-img-top home-photo" alt="Photo 1">
+                <div class="card-body">
+                    <h5 class="card-title">Steak & Potatoes </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="{% static 'homephotos/wings.jpg' %}" class="card-img-top home-photo" alt="Photo 2">
+                <div class="card-body">
+                    <h5 class="card-title">Buffalo Wings</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="{% static 'homephotos/pasta.jpg' %}" class="card-img-top home-photo" alt="Photo 3">
+                <div class="card-body">
+                    <h5 class="card-title">Scallop Spaghetti</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}

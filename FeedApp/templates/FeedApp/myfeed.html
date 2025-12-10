@@ -21,7 +21,7 @@
     </tr>
     <tr style="border: 1px solid black;padding: 6px;">
         <td> {{p.date_posted}}</td>
-        <td>Likes: &nbsp {{1}} &nbsp&nbsp&nbsp</td>
+        <td>Likes: &nbsp {{ l }} &nbsp&nbsp&nbsp</td>
         <td>Comments: &nbsp <a href="{% url 'FeedApp:comments' p.id %}">{{c}}</a> &nbsp&nbsp</td>
     </tr>
     {% endfor %}

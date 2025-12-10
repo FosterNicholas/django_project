@@ -24,7 +24,7 @@
             <td> {{p.date_posted}}</td>
             <td>
                 <button type="submit" name="like" value={{p.id}} style="background-color: transparent;border: none;">
-                    Likes: &nbsp {{1}}
+                    Likes: &nbsp {{ l }}
                 </button>
             </td>
             <td>Comments: &nbsp <a href="{% url 'FeedApp:comments' p.id %}">{{c}}</a> &nbsp&nbsp</td>
